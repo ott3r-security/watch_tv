@@ -18,7 +18,7 @@ class tvTime(models.Model):
         ('y','Yes'),
         ('n','No'),
     )
-    active = models.CharField(choices=active_choice, max_length=5)
+    active = models.CharField(default='y', choices=active_choice, max_length=5)
     names = (
         ('jennifer', 'Jennifer'),
         ('erik', 'Erik'),
@@ -40,6 +40,6 @@ class tvTime(models.Model):
 
 
     def __str__(self):
-        return self.show_name
+        return self.days_on
 
 #2003Yamaha!
